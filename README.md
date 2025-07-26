@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Tasks/Synthesis.svg" alt="Synthesis"/><br>
+  <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Tasks/Synthesis.svg" alt="Synthesis - CLI Shoe Inventory Manager"/><br>
 </h1>
 
 <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Features.svg" alt="Features" height="25px"/>
