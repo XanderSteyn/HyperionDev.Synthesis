@@ -17,6 +17,27 @@
 
 <h1></h1>
 
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/How%20It%20Works.svg" alt="How It Works" height="25px"/>
+
+- The program loads shoe data from `inventory.txt`, a CSV file with the header row:  
+  `Country,Code,Product,Cost,Quantity`
+
+- **Adding Shoes:** Users input new shoe details; the program validates inputs, adds the shoe to memory and appends it to the file.
+
+- **Viewing Inventory:** Displays all shoe data in a formatted table with cost and quantity.
+
+- **Restocking:** Finds the shoe with the lowest quantity and allows the user to add stock, updating the file accordingly.
+
+- **Searching:** Allows users to search for shoes by code (case-insensitive).
+
+- **Value per Item:** Calculates and displays total value per shoe (`cost × quantity`) in a table.
+
+- **Highest Quantity:** Identifies the shoe with the highest stock quantity and highlights it for potential sales.
+
+- All user inputs are validated for correctness, and the program handles missing or corrupted files gracefully.
+
+<h1></h1>
+
 <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Technologies%20Used.svg" alt="Technologies Used" height="30px"/>
 
 - **Python** – Core programming language
