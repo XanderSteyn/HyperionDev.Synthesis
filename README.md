@@ -17,15 +17,15 @@
 <a name="features"></a>
 <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Features.svg" alt="Features" height="25px"/>
 
-| Feature                  | Description                                                                 |
-|--------------------------|-----------------------------------------------------------------------------|
-| Object-Oriented Design   | Encapsulates shoe data and inventory logic in well-structured classes        |
-| Persistent Storage       | Reads from and writes to a CSV-based inventory file                         |
-| Interactive CLI          | Intuitive menu-driven interface for all inventory operations                |
-| Data Validation          | Comprehensive input validation and error handling                            |
-| Inventory Operations     | Add, view, restock, search, value calculation, and highlight high stock      |
-| Cross-Platform           | Works on Windows, macOS, and Linux                                          |
-| Extensible               | Easy to add new features or integrate with other systems                    |
+| Feature                  | Description                                                              |
+|--------------------------|--------------------------------------------------------------------------|
+| Object-Oriented Design   | Encapsulates shoe data and inventory logic in well-structured classes    |
+| Persistent Storage       | Reads from and writes to a CSV-based inventory file                      |
+| Interactive CLI          | Intuitive menu-driven interface for all inventory operations             |
+| Data Validation          | Comprehensive input validation and error handling                        |
+| Inventory Operations     | Add, view, restock, search, value calculation, and highlight high stock  |
+| Cross-Platform           | Works on Windows, macOS, and Linux                                       |
+| Extensible               | Easy to add new features or integrate with other systems                 |
 
 <h1></h1>
 
@@ -33,13 +33,13 @@
 <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Tech%20Stack.svg" alt="Tech Stack" height="25px"/>
 
 - Python 3.8+
-- [`tabulate`](https://pypi.org/project/tabulate/) (for table output)
+- [`tabulate`](https://pypi.org/project/tabulate/)
 - Standard Python libraries: `os`, `platform`
 
 <h1></h1>
 
 <a name="setup"></a>
-<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Setup%20Instructions.svg" alt="Setup & Installation" height="30px"/>
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Setup%20Instructions.svg" alt="Setup & Instructions" height="30px"/>
 
 #### 1. Clone the repository
 ```bash
@@ -100,15 +100,6 @@ python inventory.py
 | Product   | String  | Product name               |
 | Cost      | Float   | Price per unit             |
 | Quantity  | Integer | Units in stock             |
-
-<h1></h1>
-
-<a name="security"></a>
-<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Security.svg" alt="Security" height="30px"/>
-
-- **Input Validation:** All user inputs are validated for type and value.
-- **File Handling:** Robust error handling for file operations.
-- **No Sensitive Data:** The application does not store or process sensitive information.
 
 <h1></h1>
 
