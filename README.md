@@ -1,62 +1,54 @@
 <h1 align="center">
-  <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Tasks/Synthesis.svg" width="100%" height="130px" alt="Synthesis - CLI Shoe Inventory Manager"/><br>
+  <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Tasks/Synthesis.svg" width="100%" height="130px" alt="Shoe Inventory Management System"/><br>
 </h1>
 
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Table%20of%20Contents.svg" alt="Table of Contents" height="25px"/>
+
+- [**Features**](#features)
+- [**Tech Stack**](#tech-stack)
+- [**Setup & Installation**](#setup)
+- [**Database Schema**](#database-schema)
+- [**Security**](#security)
+- [**Contributing**](#contributing)
+- [**License**](#license)
+
+<h1></h1>
+
+<a name="features"></a>
 <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Features.svg" alt="Features" height="25px"/>
 
-- **Inventory Management:** Complete CRUD operations for shoe inventory
-- **Data Persistence:** Automatic file-based storage with CSV format
-- **Search Functionality:** Find shoes by product code with case-insensitive search
-- **Stock Management:** Restock low quantity items with automatic file updates
-- **Value Calculations:** Calculate total value per item (cost × quantity)
-- **Inventory Analytics:** Identify highest quantity items for sales promotion
-- **Input Validation:** Robust error handling with positive number validation
-- **User-Friendly Interface:** Clear menu system with formatted table displays
-- **Cross-Platform Compatibility:** Works on Windows, macOS, and Linux
-- **Comprehensive Error Handling:** Graceful handling of file operations and invalid inputs
+| Feature                  | Description                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| Object-Oriented Design   | Encapsulates shoe data and inventory logic in well-structured classes        |
+| Persistent Storage       | Reads from and writes to a CSV-based inventory file                         |
+| Interactive CLI          | Intuitive menu-driven interface for all inventory operations                |
+| Data Validation          | Comprehensive input validation and error handling                            |
+| Inventory Operations     | Add, view, restock, search, value calculation, and highlight high stock      |
+| Cross-Platform           | Works on Windows, macOS, and Linux                                          |
+| Extensible               | Easy to add new features or integrate with other systems                    |
 
 <h1></h1>
 
-<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/How%20It%20Works.svg" alt="How It Works" height="25px"/>
+<a name="tech-stack"></a>
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Tech%20Stack.svg" alt="Tech Stack" height="25px"/>
 
-- The program loads shoe data from `inventory.txt`, a CSV file with the header row:  
-  `Country,Code,Product,Cost,Quantity`
-
-- **Adding Shoes:** Users input new shoe details; the program validates inputs, adds the shoe to memory and appends it to the file.
-
-- **Viewing Inventory:** Displays all shoe data in a formatted table with cost and quantity.
-
-- **Restocking:** Finds the shoe with the lowest quantity and allows the user to add stock, updating the file accordingly.
-
-- **Searching:** Allows users to search for shoes by code (case-insensitive).
-
-- **Value per Item:** Calculates and displays total value per shoe (`cost × quantity`) in a table.
-
-- **Highest Quantity:** Identifies the shoe with the highest stock quantity and highlights it for potential sales.
-
-- All user inputs are validated for correctness, and the program handles missing or corrupted files gracefully.
+- Python 3.8+
+- [`tabulate`](https://pypi.org/project/tabulate/) (for table output)
+- Standard Python libraries: `os`, `platform`
 
 <h1></h1>
 
-<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Technologies%20Used.svg" alt="Technologies Used" height="30px"/>
-
-- **Python** – Core programming language
-- **Tabulate** – For formatted table displays
-- **OS Module** – For cross-platform console operations
-- **Platform Module** – For OS detection and system-specific commands
-
-<h1></h1>
-
-<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Setup%20Instructions.svg" alt="Setup Instructions" height="30px"/>
+<a name="setup"></a>
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Setup%20Instructions.svg" alt="Setup & Installation" height="30px"/>
 
 #### 1. Clone the repository
 ```bash
-git clone https://github.com/XanderSteyn/HyperionDev.Synthesis
+git clone https://github.com/XanderSteyn/HyperionDev.Shoe-Inventory-Manager/
 ```
 
 #### 2. Change to the project directory
 ```bash
-cd "HyperionDev.Synthesis"
+cd "HyperionDev.Shoe-Inventory-Manager"
 ```
 
 #### 3. Create a virtual environment
@@ -83,20 +75,55 @@ cd "HyperionDev.Synthesis"
   source ./venv/bin/activate
   ```
 
-#### 5. Install required dependencies
+#### 5. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
 #### 6. Run the application
-```bash
+```sh
 python inventory.py
 ```
 
+- The application will prompt to create `inventory.txt` if missing.
+- Sample data is provided in the repository.
+
 <h1></h1>
 
+<a name="database-schema"></a>
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/DatabaseSchema.svg" alt="Database Schema" height="25px"/>
+
+| Field     | Type    | Description                |
+|-----------|---------|----------------------------|
+| Country   | String  | Country of manufacture     |
+| Code      | String  | Unique product code (SKU)  |
+| Product   | String  | Product name               |
+| Cost      | Float   | Price per unit             |
+| Quantity  | Integer | Units in stock             |
+
+<h1></h1>
+
+<a name="security"></a>
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Security.svg" alt="Security" height="30px"/>
+
+- **Input Validation:** All user inputs are validated for type and value.
+- **File Handling:** Robust error handling for file operations.
+- **No Sensitive Data:** The application does not store or process sensitive information.
+
+<h1></h1>
+
+<a name="contributing"></a>
+<img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/Repos/Contributing.svg" alt="Contributing" height="30px"/>
+
+1. Fork the repository and create a feature branch.
+2. Follow PEP8 and project code style (see `.flake8` config)
+3. Write tests for new features and bug fixes.
+4. Submit a pull request with a clear description.
+
+<h1></h1>
+
+<a name="license"></a>
 <img src="https://github.com/XanderSteyn/xandersteyn/blob/main/IGNORE/Headers/License.svg" alt="License" height="25px"/>
 
-This repository is protected by a custom license. See the [LICENSE](LICENSE) file for details.
-
-Unauthorized copying or submission of this work for academic purposes is prohibited. 
+This repository is protected by a custom license. See the [LICENSE](LICENSE) file for details.  
+Unauthorized copying or submission of this work for academic purposes is prohibited.
